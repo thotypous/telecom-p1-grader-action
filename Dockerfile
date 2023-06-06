@@ -1,7 +1,7 @@
 FROM archlinux
 RUN pacman -Syyu --noconfirm
 RUN pacman-db-upgrade
-RUN pacman -S --noconfirm base-devel git cmake rtaudio gtest mingw-w64-gcc
+RUN pacman -S --noconfirm base-devel git cmake rtaudio gtest mingw-w64-gcc python-matplotlib
 COPY entrypoint.sh /entrypoint.sh
 COPY TC-mingw.cmake /mingw-install/
 RUN cd /tmp && \
